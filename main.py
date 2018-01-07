@@ -4,7 +4,7 @@
 
 ## Hello. If you are unfamiliar with Python, this file may look intimidating to you. While my comments throughout the code should help you to understand what it is doing, you don't have to worry about most of it.
 
-## Please take a look at the Word document included in the template-filler repository named "template.docx". In it, you will find a table with the portions of the template that are to be modified by this script.
+## Please take a look at the Word document included in the award-generator repository named "template.docx". In it, you will find a table with the portions of the template that are to be modified by this script.
 
 ## Each row of this table has a number to identify it, starting at 0 and incrementing upwards. The first row == 0, the second row == 1, etc. You can change which row the script should edit by modifying the variables below this comment.
 
@@ -312,9 +312,9 @@ while response is None:
         printMessage("Please enter yes or no.")
         response = None
 
-if not os.path.isdir(os.path.expanduser("~/Desktop/templateFillerExports/")):
+if not os.path.isdir(os.path.expanduser("~/Desktop/awardsGenerator/")):
     # Makes a "templateFillerExports" directory if one does not already exist.
-    os.makedirs(os.path.expanduser("~/Desktop/templateFillerExports/"))
+    os.makedirs(os.path.expanduser("~/Desktop/awardsGenerator/"))
 
 i = 0 # counter for number of awards made
 
@@ -335,13 +335,13 @@ try:
         filename = "__".join([committee, award, delegation])
         filename = filename + ".docx"
 
-        doc.save(os.path.expanduser("~/Desktop/templateFillerExports/" + filename))
+        doc.save(os.path.expanduser("~/Desktop/awardsGenerator/" + filename))
 
         i = i + 1
 except:
     goodbye("The script encountered a problem.")
 
 printMessage(str(i) + " files were successfully created.")
-printMessage("They are available in " + os.path.realpath(os.path.expanduser("~/Desktop/templateFillerExports/")) + ".")
+printMessage("They are available in " + os.path.realpath(os.path.expanduser("~/Desktop/awardsGenerator/")) + ".")
 printMessage("You can now close this window.")
 divider()
