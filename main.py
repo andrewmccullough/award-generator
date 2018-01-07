@@ -312,9 +312,9 @@ while response is None:
         printMessage("Please enter yes or no.")
         response = None
 
-if not os.path.isdir(os.path.expanduser("~/Desktop/awardsGenerator/")):
+if not os.path.isdir(os.path.expanduser("~/Desktop/awardGenerator/")):
     # Makes a "templateFillerExports" directory if one does not already exist.
-    os.makedirs(os.path.expanduser("~/Desktop/awardsGenerator/"))
+    os.makedirs(os.path.expanduser("~/Desktop/awardGenerator/"))
 
 i = 0 # counter for number of awards made
 
@@ -335,13 +335,13 @@ try:
         filename = "__".join([committee, award, delegation])
         filename = filename + ".docx"
 
-        doc.save(os.path.expanduser("~/Desktop/awardsGenerator/" + filename))
+        doc.save(os.path.expanduser("~/Desktop/awardGenerator/" + filename))
 
         i = i + 1
 except:
     goodbye("The script encountered a problem.")
 
 printMessage(str(i) + " files were successfully created.")
-printMessage("They are available in " + os.path.realpath(os.path.expanduser("~/Desktop/awardsGenerator/")) + ".")
+printMessage("They are available in " + os.path.realpath(os.path.expanduser("~/Desktop/awardGenerator/")) + ".")
 printMessage("You can now close this window.")
 divider()
