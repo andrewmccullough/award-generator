@@ -310,9 +310,9 @@ while response is None:
         printMessage("Please enter yes or no.")
         response = None
 
-if not os.path.isdir(os.path.expanduser("~/Desktop/exports/")):
-    # Makes an "exports" directory if one does not already exist.
-    os.makedirs(os.path.expanduser("~/Desktop/exports/"))
+if not os.path.isdir(os.path.expanduser("~/Desktop/templateFillerExports/")):
+    # Makes a "templateFillerExports" directory if one does not already exist.
+    os.makedirs(os.path.expanduser("~/Desktop/templateFillerExports/"))
 
 i = 0 # counter for number of awards made
 
@@ -333,12 +333,12 @@ try:
         filename = "__".join([committee, award, delegation])
         filename = filename + ".docx"
 
-        doc.save(os.path.expanduser("~/Desktop/exports/" + filename))
+        doc.save(os.path.expanduser("~/Desktop/templateFillerExports/" + filename))
 
         i = i + 1
 except:
     goodbye("The script encountered a problem.")
 
 printMessage(str(i) + " awards were successfully created.")
-printMessage("They are available in " + os.path.realpath(os.path.expanduser("~/Desktop/exports/")) + ".")
+printMessage("They are available in " + os.path.realpath(os.path.expanduser("~/Desktop/templateFillerExports/")) + ".")
 divider()
