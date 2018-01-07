@@ -1,3 +1,3 @@
-# template-filler
+# award-generator
 
-Visit the [Releases page](https://github.com/andrewmccullough/template-filler/releases) to download the app.
+Visit the [Releases page](https://github.com/andrewmccullough/award-generator/releases) to download the app.
