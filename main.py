@@ -220,9 +220,9 @@ if awardsFileExtension not in [".csv", ".xlsx"]:
     # If the file is not a CSV or XLSX file...
     goodbye("The awards spreadsheet must be in either CSV or XLSX format.")
 
-if not os.path.isfile("~/.template.docx"):
+if not os.path.isfile("~/Desktop/template.docx"):
     # If template.docx is not found...
-    goodbye("We can't find the template file for your awards [\"template.docx\"].")
+    goodbye("We can't find the template file for your awards [\"template.docx\"] on your Desktop.")
 
 if awardsFileExtension == ".csv":
 
