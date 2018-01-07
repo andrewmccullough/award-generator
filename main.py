@@ -67,21 +67,28 @@ def printMessage(message):
 
     while len(message) > 0:
 
-        if len(line) + len(message[0]) < width:
-
-            # If length of current line plus the next word of the message is less than the width of the Terminal, add the next word to the current line.
+        if len(message[0]) >= width:
             line = line + message[0] + " "
             message.pop(0)
-
-            if len(message) == 0:
-                # If the word that was just appended to the current line was the last word in the message, append the current line to the list of lines.
-                lines.append(line)
-
-        else:
-
-            # Otherwise, append the current line to the list of lines and start a new line.
             lines.append(line)
             line = ""
+        else:
+            if len(line) + len(message[0]) < width:
+
+                # If length of current line plus the next word of the message is less than the width of the Terminal, add the next word to the current line.
+                line = line + message[0] + " "
+                message.pop(0)
+
+                if len(message) == 0:
+                    # If the word that was just appended to the current line was the last word in the message, append the current line to the list of lines.
+                    lines.append(line)
+
+            else:
+
+                # Otherwise, append the current line to the list of lines and start a new line.
+                lines.append(line)
+                line = ""
+
 
     for l in lines:
         print(l)
