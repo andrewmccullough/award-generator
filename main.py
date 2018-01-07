@@ -200,7 +200,7 @@ except ImportError:
 
 os.system("clear")
 
-printMessage("Enter the filename and extension for your awards spreadsheet. It must be in this directory. Or, drag and drop the file from anywhere on your Mac into the Terminal.")
+printMessage("Drag and drop your awards spreadsheet from anywhere on your Mac into the Terminal.")
 
 divider()
 awardsFile = input(" $ ").strip().replace("\\", "")
@@ -220,7 +220,7 @@ if awardsFileExtension not in [".csv", ".xlsx"]:
     # If the file is not a CSV or XLSX file...
     goodbye("The awards spreadsheet must be in either CSV or XLSX format.")
 
-if not os.path.isfile("template.docx"):
+if not os.path.isfile("~/.template.docx"):
     # If template.docx is not found...
     goodbye("We can't find the template file for your awards [\"template.docx\"].")
 
@@ -333,12 +333,12 @@ try:
         filename = "__".join([committee, award, delegation])
         filename = filename + ".docx"
 
-        doc.save("exports/" + filename)
+        doc.save("~/Desktop/exports/" + filename)
 
         i = i + 1
 except:
     goodbye("The script encountered a problem.")
 
 printMessage(str(i) + " awards were successfully created.")
-printMessage("They are available in " + os.path.realpath("exports") + ".")
+printMessage("They are available in " + os.path.realpath("~/Desktop/exports/") + ".")
 divider()
