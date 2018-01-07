@@ -220,7 +220,7 @@ if awardsFileExtension not in [".csv", ".xlsx"]:
     # If the file is not a CSV or XLSX file...
     goodbye("The awards spreadsheet must be in either CSV or XLSX format.")
 
-if not os.path.isfile("~/Desktop/template.docx"):
+if not os.path.isfile(os.path.expanduser("~/Desktop/template.docx")):
     # If template.docx is not found...
     goodbye("We can't find the template file for your awards [\"template.docx\"] on your Desktop.")
 
@@ -333,12 +333,12 @@ try:
         filename = "__".join([committee, award, delegation])
         filename = filename + ".docx"
 
-        doc.save("~/Desktop/exports/" + filename)
+        doc.save(os.path.expanduser("~/Desktop/exports/" + filename))
 
         i = i + 1
 except:
     goodbye("The script encountered a problem.")
 
 printMessage(str(i) + " awards were successfully created.")
-printMessage("They are available in " + os.path.realpath("~/Desktop/exports/") + ".")
+printMessage("They are available in " + os.path.realpath(os.path.expanduser("~/Desktop/exports/")) + ".")
 divider()
