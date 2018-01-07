@@ -200,6 +200,8 @@ except ImportError:
 
 os.system("clear")
 
+printMessage("Press return on any blank line to quit.")
+divider()
 printMessage("Drag and drop your awards spreadsheet from anywhere on your Mac into the Terminal.")
 
 divider()
@@ -339,6 +341,7 @@ try:
 except:
     goodbye("The script encountered a problem.")
 
-printMessage(str(i) + " awards were successfully created.")
+printMessage(str(i) + " files were successfully created.")
 printMessage("They are available in " + os.path.realpath(os.path.expanduser("~/Desktop/templateFillerExports/")) + ".")
+printMessage("You can now close this window.")
 divider()
