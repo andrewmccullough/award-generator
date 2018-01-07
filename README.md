@@ -1,4 +1,3 @@
 # template-filler
-Systematically generate and fill templates using data from an Excel or CSV spreadsheet.
 
-Visit the Releases page to download the app.
+Visit the [Releases page](https://github.com/andrewmccullough/template-filler/releases) to download the app.
