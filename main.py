@@ -322,7 +322,7 @@ try:
         award = l[1]
         delegation = l[2]
 
-        doc = docx.Document("template.docx")
+        doc = docx.Document(os.path.expanduser("~/Desktop/template.docx"))
 
         fields = doc.tables[0]
 
