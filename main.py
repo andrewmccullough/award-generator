@@ -4,6 +4,8 @@
 
 ## Hello. If you are unfamiliar with Python, this file may look intimidating to you. While my comments throughout the code should help you to understand what it is doing, you don't have to worry about most of it.
 
+## If you aren't trying to customize parts of the template that this script will edit, you can simply use Award Generator as an app on your Mac. Visit the award-generator repository's releases page.
+
 ## Please take a look at the Word document included in the award-generator repository named "template.docx". In it, you will find a table with the portions of the template that are to be modified by this script.
 
 ## Each row of this table has a number to identify it, starting at 0 and incrementing upwards. The first row == 0, the second row == 1, etc. You can change which row the script should edit by modifying the variables below this comment.
