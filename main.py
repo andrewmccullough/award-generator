@@ -310,9 +310,9 @@ while response is None:
         printMessage("Please enter yes or no.")
         response = None
 
-if not os.path.isdir("exports"):
+if not os.path.isdir(os.path.expanduser("~/Desktop/exports/")):
     # Makes an "exports" directory if one does not already exist.
-    os.makedirs("exports")
+    os.makedirs(os.path.expanduser("~/Desktop/exports/"))
 
 i = 0 # counter for number of awards made
 
